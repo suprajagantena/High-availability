@@ -5,16 +5,13 @@ resource "aws_security_group" "allow_tls" {
 
   ingress {
     description = "TLS from VPC"
-    from_port   = 443
-    to_port     = 443
+    ports   = ["443", "8080", "22"]
     protocol    = "tcp"
     cidr_blocks = aws_vpc.main.cidr_block
   }
 
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
+    ports   = ["443", "8080", "22"]
     cidr_blocks = ["0.0.0.0/0"]
   }
 
