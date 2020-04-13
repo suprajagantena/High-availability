@@ -1,4 +1,4 @@
-data "aws_instance" "foo" {
+data "aws_instance" "pri" {
   instance_id = "i-instanceid"
 
   filter {
