@@ -11,7 +11,7 @@ resource "aws_security_group" "sg" {
   }
 
   egress {
-    ports   = ["443", "8080", "22"]
+    ports   = ["443, 8080,22"]
     cidr_blocks = ["0.0.0.0/0"]
   }
 
