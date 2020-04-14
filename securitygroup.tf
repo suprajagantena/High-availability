@@ -8,7 +8,7 @@ resource "aws_security_group" "sg" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["aws_vpc.main.cidr_block"]
+    cidr_blocks = ["aws_vpc.dev.cidr_block"]
   }
 
   egress {
