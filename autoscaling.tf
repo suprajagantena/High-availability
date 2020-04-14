@@ -1,19 +1,3 @@
-data "aws_ami" "Linux" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["Linux/images/hvm-ssd/Linux-trusty-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = [""] # Canonical
-}
-
 resource "aws_launch_configuration" "as_conf" {
   name_prefix   = "terraform-lc-example-"
   image_id      = "data.aws_ami.Linux.id"
