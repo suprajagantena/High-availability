@@ -5,13 +5,13 @@ resource "aws_security_group" "sg" {
 
   ingress {
     description = "TLS from VPC"
-    ports   = ["443", "8080", "22"]
+    ports   = 443
     protocol    = "tcp"
     cidr_blocks = ["aws_vpc.main.cidr_block"]
   }
 
   egress {
-    ports   = ["443, 8080,22"]
+    ports   = 443
     cidr_blocks = ["0.0.0.0/0"]
   }
 
