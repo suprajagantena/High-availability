@@ -1,5 +1,5 @@
 data "aws_instance" "pri" {
-  instance_id = "i-instanceid"
+  #instance_id = "i-instanceid"
 
   filter {
     name   = "image-id"
