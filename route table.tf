@@ -1,6 +1,6 @@
 resource "aws_route_table_association" "a" {
-  subnet_id      = aws_subnet.pub.id
-  route_table_id = aws_route_table.pub.id
+  subnet_id      = "aws_subnet.pub.id"
+  route_table_id = "aws_route_table.pub.id"
 }
 #resource "aws_route_table" "r" {
 #  vpc_id = "${aws_vpc.dev.id}"
