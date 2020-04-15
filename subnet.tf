@@ -1,7 +1,7 @@
 resource "aws_subnet" "public" {
   vpc_id     = "aws_vpc.dev.id"
   cidr_block = "10.0.1.0/16"
-
+ availability_zone = data.aws_availability_zones.available.names[0,1]
   tags = {
     Name = "devpubsub"
   }
