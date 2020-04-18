@@ -1,12 +1,16 @@
 resource "aws_instance" "dev" {
   ami           = "data.aws_ami.Linux.id"
   instance_type = "t2.micro"
-  variable "region_number" {
+  variable "az_number" {
   default = {
-    us-east-1      = 1
-    us-west-1      = 2
-    }
-    }
+    a = 1
+    b = 2
+    c = 3
+    d = 4
+    e = 5
+    f = 6
+  }
+}
 
   tags = {
     Name = "HelloWorld"
