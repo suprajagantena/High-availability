@@ -1,4 +1,4 @@
 resource "aws_eip" "nat" {
-  instance = "aws_instance.pri.id"
+  instance = "aws_instance.dev.id"
    vpc      = true
 }
