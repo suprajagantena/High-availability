@@ -3,7 +3,7 @@ resource "aws_route_table_association" "a" {
   route_table_id = "aws_route_table.pub.id"
 }
 resource "aws_route_table" "r" {
-  vpc_id = "${aws_vpc.dev.id}"
+  vpc_id = aws_vpc.dev.id
 
   route {
   cidr_block = "10.192.0.0/16"
