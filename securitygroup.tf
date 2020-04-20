@@ -1,7 +1,7 @@
 resource "aws_security_group" "sg" {
   name        = "sg"
   description = "Allow TLS inbound traffic"
-  vpc_id      = "aws_vpc.dev.id"
+  vpc_id      = aws_vpc.dev.id
 
   ingress {
     description = "TLS from VPC"
